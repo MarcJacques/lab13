@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 int main() 
@@ -37,10 +38,11 @@ int main()
 
       totalSnow += snowHeight[i];
       
-      cout << date[i]<<"         "<<snowHeight[i]<< endl;
+      cout << date[i]<<"        "<<snowHeight[i]<< endl;
       
     }
   average = totalSnow/SIZE;
+  cout << fixed << showpoint << setprecision(2);
 
   cout <<"Height snow fall is " <<snowHeight[peakSnowDay]<<" on "<<date[peakSnowDay]<<"th and the average snow fall is "<<average<<endl;
   
